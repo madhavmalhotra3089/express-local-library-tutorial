@@ -1,4 +1,4 @@
-const Book = require('../models/book');
+const Book = require('../models/Book');
 const Author = require('../models/Author');
 const Genre = require('../models/Genre');
 const BookInstance = require('../models/BookInstance');

@@ -1,5 +1,5 @@
 const Author = require('../models/Author');
-const Book = require ('../models/book');
+const Book = require ('../models/Book');
 const async = require ('async');
 // Display list of all Authors.
 
