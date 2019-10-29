@@ -12,8 +12,10 @@ var catalogRouter = require('./routes/catalog');
 var app = express();
 
 // Setting up the mongodb database
-const mongoDB = 'mongodb://127.0.0.1/locallibrary';
-mongoose.connect(mongoDB, { useNewUrlParser: true,useUnifiedTopology:true });
+var dev_db_url = 'mongodb+srv://express:locallibrary@cluster0-lsqmj.mongodb.net/test?retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
+
+mongoose.connect(dev_db_url, { useNewUrlParser: true,useUnifiedTopology:true });
 
 // Get the default mongo connection
 var db = mongoose.connection;
